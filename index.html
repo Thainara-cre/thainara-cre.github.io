@@ -5,6 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
+    <link rel="stylesheet" href="css/carroucel.css">
     <link rel="stylesheet" href="css/style.css">
     <title>Thainara da Silva Gomes</title>
 </head>
@@ -450,15 +452,112 @@
         </div>
     </div>
     <!--================= Our Clients =================-->
+    <div class="our-client sub-section">
+        <div class="container flex-center">
+            <h2 class="section-title-01">Ours Clients</h2>
+            <h3 class="section-title-02">Ours Clients</h3>
+            <div class="content">
+                <div class="swiper mySwiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-1.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-2.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-3.jpg" />
+                      </div>
+                      <div class="swiper-slide">
+                        <img src="https://swiperjs.com/demos/images/nature-4.jpg" />
+                      </div>
+                    </div>
+                    
+                    <div class="swiper-pagination"></div>
+                </div>
+            </div>
+        </div>
+    </div>
     </section>
-
+    <a href="https://wa.me/5511967247265?text=Olá,%20preciso%20de%20ajuda!" target="_blank">
+        <button>Enviar Mensagem no WhatsApp</button>
+    </a>
+    
 
     <!--================= Contact section =================-->
-
+    <div class="contact section" id="contact">
+        <div class="container flex-center">
+            <h2 class="section-title-01">Contact Me</h2>
+            <h3 class="section-title-02">Contact Me</h3>
+            <div class="content">
+                <div class="contact-left">
+                    <h2>Let's discuss your project</h2>
+                    <ul>
+                        <li class="contact-list">
+                            <h3 class="item-title"><i class="fas fa-phone"></i> Phone</h3>
+                            <span>+55 11 9672-4765</span>
+                        </li>
+                        <li class="contact-list">
+                            <h3 class="item-title"><i class="far fa-envelope"></i> E-mail</h3>
+                            <span><a href="mailto:thainaracaracol@gmail.com">thainaracaracol@gmail.com</a></span>
+                        </li>
+                        <li class="contact-list">
+                            <h3 class="item-title"><i class="fas fa-map-marked-alt"></i> Official Address</h3>
+                            <span>+55 11 9672-4765</span>
+                        </li>
+                        <li class="contact-list">
+                            <h3 class="item-title"><i class="fab fa-linkedin"></i> linkedin</h3>
+                            <span><a href="https://www.linkedin.com/in/thainara-da-silva-gomes/">https://www.linkedin.com/in/thainara-da-silva-gomes/</a></span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="contact-right">
+                    <p>
+                        I'm always open to discussing product<br> <span>design work or partnership opportunities.</span>
+                        <form action="" class="contact-form">
+                            <div class="first-row">
+                                <input type="text" placeholder="Name">
+                                
+                            </div>
+                            <div class="second-row">
+                                <input type="email" placeholder="Email">
+                                <input type="text" placeholder="Subject">
+                            </div>
+                            <div class="third-row">
+                                <textarea name="" id="" rows="7" placeholder="Message"></textarea>
+                            </div>
+                            <button class="btn" type="submit">Send Message <i class="far fa-paper-plane"></i></button>
+                        </form>
+                    </p>
+                </div>
+            </div>
+    </div>
     <!--================= Footer =================-->
 
     <!--================= External scripts =================-->
     <script src="js/main.js"></script>
+    <script type="module">
+        import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+      
+        var swiper = new Swiper(".mySwiper", {
+            spaceBetween: 30,
+            centeredSlides: true,
+            slidesPerView: 1,
+            loop: true,
+            autoplay: {
+                delay: 2500,
+                disableOnInteraction: false,
+            },
+            pagination: {
+                el: ".swiper-pagination",
+                clickable: true,
+            },
+            navigation: {
+                nextEl: ".swiper-button-next",
+                prevEl: ".swiper-button-prev",
+            },
+            });
+      </script>
 </body>
 
 </html>
