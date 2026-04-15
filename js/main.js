@@ -28,9 +28,9 @@ ModalCloseBtn.forEach((ModalCloseBtn) => {
 });
 
 //Portfolio section - Modal
-const PortfolioModals = document.querySelectorAll('.portfolio-model');
+const PortfolioModals = document.querySelectorAll('.portfolio-modal');
 const imgCards = document.querySelectorAll('.img-card');
-const portifolioCloseBtns = document.querySelectorAll('.portifolio-close-btn');
+const portfolioCloseBtns = document.querySelectorAll('.portfolio-close-btn');
 
 var portfolioModal = function(modalClick) {
     PortfolioModals[modalClick].classList.add('active');
@@ -42,8 +42,8 @@ imgCards.forEach((imgCard, i) => {
     });
 });
 
-portifolioCloseBtns.forEach((portifolioCloseBtn) => {
-    portifolioCloseBtn.addEventListener('click', () => {
+portfolioCloseBtns.forEach((portfolioCloseBtn) => {
+    portfolioCloseBtn.addEventListener('click', () => {
         PortfolioModals.forEach((portfolioModalView) => {
             portfolioModalView.classList.remove('active')
         });

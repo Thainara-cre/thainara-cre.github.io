@@ -13,9 +13,8 @@
     --body-bg-color: #fefefe;
     --card-bg-color: #fff;
     --modal-bg-color: #fff;
-    --bg-transparent-color: rgba(0, 0, 0, 0.1);
-    --transparent-color01: rgba(0, 0, 0, 0.1);
-    --transparent-color02: rgba(106, 89, 201, 0.1);
+    --overlay-color: rgba(0, 0, 0, 0.1);
+    --accent-transparent-color: rgba(106, 89, 201, 0.1);
     --line-color: #d7d7d7;
 
     /*=================Color Filter=================*/
@@ -47,7 +46,7 @@ html {
 
 body {
     color: var(--first-color);
-    background: va(--body-bg-color);
+    background: var(--body-bg-color);
     margin: 2rem 0 0 0;
     transition: .5s ease;
 }
@@ -81,13 +80,13 @@ li {
 
 /*=================Header=================*/
 header {
-    z-index: 99999;
+    z-index: 1000;
     width: 100%;
     position: fixed;
     top: 0;
     left: 0;
     backdrop-filter: blur(20px);
-    transition: .6s ease; 
+    transition: .6s ease;
 }
 
 header.sticky {
@@ -103,9 +102,8 @@ header.sticky {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    margin-left: auto;
-    margin-right: auto;
-    padding:  0 20px;
+    margin-inline: auto;
+    padding: 0 20px;
     transition: .6s ease;
 }
 
@@ -138,8 +136,7 @@ header.sticky .nav-bar {
     position: relative;
     max-width: 1250px;
     max-height: 100vh;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     padding: 4rem 1rem;
     flex-direction: column;
 }
@@ -175,7 +172,7 @@ header.sticky .nav-bar {
 
 .home-container .info h3 {
     color: var(--third-color);
-    font-feature-settings: 1.3em;
+    font-size: 1.3em;
     font-weight: 600;
     line-height: 50px;
 }
@@ -240,16 +237,14 @@ header.sticky .nav-bar {
 .section {
     position: relative;
     width: 1150px;
-    margin-left: auto;
-    margin-right: auto;
-    padding: 6rem 2rem 2rem; 
+    margin-inline: auto;
+    padding: 6rem 2rem 2rem;
 }
 
 .sub-section {
     position: relative;
     width: 1150px;
-    margin-left: auto;
-    margin-right: auto;
+    margin-inline: auto;
     padding: 6rem 0;
 }
 
@@ -284,10 +279,13 @@ header.sticky .nav-bar {
     flex-direction: column;
 }
 
+.container .content {
+    width: 100%;
+}
+
 /*=================About section=================*/
 .about .container .content{
     column-gap: 40px;
-    width: 100%;
 }
 
 .about-img {
@@ -295,7 +293,7 @@ header.sticky .nav-bar {
 }
 
 .about-img img {
-    max-width: relative;
+    max-width: 100%;
     border-radius: 10px;
     height: 32.5rem;
 }
@@ -340,10 +338,6 @@ header.sticky .nav-bar {
 }
 
 /*=================Skills section=================*/
-.skills .container .content {
-    width: 100%;
-}
-
 .skills-description  {
     max-width: 700px;
     margin-bottom: 60px;
@@ -411,7 +405,7 @@ header.sticky .nav-bar {
     box-shadow: var(--box-shadow);
     margin-bottom: 10px;
     border-radius: 6px;
-    transition: .3 ease;
+    transition: .3s ease;
     padding: 20px;
 }
 
@@ -431,7 +425,7 @@ header.sticky .nav-bar {
     position: relative;
     width: 100%;
     height: 7px;
-    background: #c5cadf;
+    background: var(--scroll-bar-color);
     border-radius: 5em;
 }
 
@@ -505,10 +499,6 @@ header.sticky .nav-bar {
     width: 10%;
 }
 /*=================Services section=================*/
-.services .container .content {
-    width: 100%;
-}
-
 .services-description h3{
     font-size: 2em;
     margin-bottom: 50px;
@@ -546,7 +536,7 @@ header.sticky .nav-bar {
 .service-card .learn-more-btn {
     color: var(--third-color);
     cursor: pointer;
-    transition: .3 ease;
+    transition: .3s ease;
 }
 
 .service-card .learn-more-btn i {
@@ -559,13 +549,13 @@ header.sticky .nav-bar {
 
 /*=================Service Modal=================*/
 .service-modal {
-    z-index: 99999;
+    z-index: 2000;
     position: fixed;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: var(--bg-transparent-color);
+    background-color: var(--overlay-color);
     backdrop-filter: blur(10px);
     visibility: hidden;
     opacity: 0;
@@ -619,10 +609,6 @@ header.sticky .nav-bar {
     margin-right: 10px;
 }
 /*=================Portfolio section=================*/
-.portifolio .container .content {
-    width: 100%;
-}
-
 .portfolio-list {
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
@@ -647,7 +633,7 @@ header.sticky .nav-bar {
 }
 
 .portfolio-list .img-card:hover .overlay {
-    z-index: 777;
+    z-index: 10;
     position: absolute;
     width: 100%;
     height: 100%;
@@ -655,7 +641,7 @@ header.sticky .nav-bar {
 }
 
 .portfolio-list .img-card .info{
-    z-index: 777;
+    z-index: 20;
     position: absolute;
     bottom: 0;
     left: 0;
@@ -687,26 +673,26 @@ header.sticky .nav-bar {
     object-fit: cover;
 }
 
-.portfolio-model {
-    z-index: 999999999;
+.portfolio-modal {
+    z-index: 2000;
     position: fixed;
     width: 100%;
     height: 100vh;
     top: 0;
     left: 0;
-    background-color: var(--transparent-color01);
+    background-color: var(--overlay-color);
     backdrop-filter: blur(20px);
     visibility: hidden;
     opacity: 0;
     transition: .3s ease;
 }
 
-.portfolio-model.active {
+.portfolio-modal.active {
     visibility: visible;
     opacity: 1;
 }
 
-.portfolio-model-body {
+.portfolio-modal-body {
     position: relative;
     max-width: 600px;
     margin: 20px;
@@ -718,11 +704,11 @@ header.sticky .nav-bar {
     transform: translateY(-50px);
 }
 
-.portfolio-model.active .portfolio-model-body {
+.portfolio-modal.active .portfolio-modal-body {
     transform: translateY(0);
 }
 
-.portifolio-close-btn {
+.portfolio-close-btn {
     position: absolute;
     top: 0;
     right: 0;
@@ -730,11 +716,11 @@ header.sticky .nav-bar {
     cursor: pointer;
 }
 
-.portfolio-model-body h3 {
+.portfolio-modal-body h3 {
     font-size: 2em;
 }
 
-.portfolio-model-body img {
+.portfolio-modal-body img {
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -744,10 +730,6 @@ header.sticky .nav-bar {
 /*=================Get - in - touct=================*/
 .get-in-touch {
     margin-top: 70px;
-}
-
-.get-in-touch .container .content {
-    width: 100%;
 }
 
 .get-in-touch .contact-card {
@@ -784,10 +766,3 @@ header.sticky .nav-bar {
     -webkit-text-fill-color: transparent;
     opacity: 0.5;
 }
-/*=================Qualification section=================*/
-
-/*=================Contact section=================*/
-
-/*=================Footer=================*/
-
-/*=================Media query max-width=================*/
