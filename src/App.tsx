@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, ArrowRight, Github, Linkedin, Mail, MapPin, MessageCircle, Sparkles } from 'lucide-react'
+import { ArrowDown, ArrowRight, Mail, MapPin, MessageCircle, Sparkles } from 'lucide-react'
+import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { Header } from './components/Header'
 import { SectionTitle } from './components/SectionTitle'
 import { highlights, projects, skills } from './data/portfolio'
@@ -25,8 +26,8 @@ function App() {
               <a className="secondary-button" href="#contact">Falar comigo</a>
             </div>
             <div className="mt-9 flex gap-3">
-              <a className="social-button" aria-label="GitHub" href="https://github.com/Thainara-cre" target="_blank" rel="noreferrer"><Github size={19}/></a>
-              <a className="social-button" aria-label="LinkedIn" href="https://www.linkedin.com/in/thainara-da-silva-gomes/" target="_blank" rel="noreferrer"><Linkedin size={19}/></a>
+              <a className="social-button" aria-label="GitHub" href="https://github.com/Thainara-cre" target="_blank" rel="noreferrer"><FaGithub size={19}/></a>
+              <a className="social-button" aria-label="LinkedIn" href="https://www.linkedin.com/in/thainara-da-silva-gomes/" target="_blank" rel="noreferrer"><FaLinkedin size={19}/></a>
               <a className="social-button" aria-label="E-mail" href="mailto:thainaracaracol@gmail.com"><Mail size={19}/></a>
             </div>
           </motion.div>
@@ -76,7 +77,7 @@ function App() {
               <div><p className="mb-3 text-sm font-bold uppercase tracking-[.22em] text-violet-400">Contato</p><h2 className="max-w-2xl text-3xl font-black tracking-tight text-white sm:text-5xl light:text-slate-950">Vamos construir algo interessante?</h2><p className="mt-5 max-w-xl leading-7 text-slate-400 light:text-slate-600">Estou aberta a conversar sobre oportunidades, produtos, engenharia de software e projetos de tecnologia.</p></div>
               <a className="primary-button whitespace-nowrap" href="mailto:thainaracaracol@gmail.com">Enviar e-mail <Mail size={18}/></a>
             </div>
-            <div className="relative z-10 mt-10 flex flex-wrap gap-x-7 gap-y-4 text-sm text-slate-400 light:text-slate-600"><span className="flex items-center gap-2"><MapPin size={17}/> São Paulo, Brasil</span><a className="flex items-center gap-2 hover:text-white light:hover:text-slate-950" href="https://wa.me/5511967247265" target="_blank" rel="noreferrer"><MessageCircle size={17}/> WhatsApp</a><a className="flex items-center gap-2 hover:text-white light:hover:text-slate-950" href="https://www.linkedin.com/in/thainara-da-silva-gomes/" target="_blank" rel="noreferrer"><Linkedin size={17}/> LinkedIn</a></div>
+            <div className="relative z-10 mt-10 flex flex-wrap gap-x-7 gap-y-4 text-sm text-slate-400 light:text-slate-600"><span className="flex items-center gap-2"><MapPin size={17}/> São Paulo, Brasil</span><a className="flex items-center gap-2 hover:text-white light:hover:text-slate-950" href="https://wa.me/5511967247265" target="_blank" rel="noreferrer"><MessageCircle size={17}/> WhatsApp</a><a className="flex items-center gap-2 hover:text-white light:hover:text-slate-950" href="https://www.linkedin.com/in/thainara-da-silva-gomes/" target="_blank" rel="noreferrer"><FaLinkedin size={17}/> LinkedIn</a></div>
           </motion.div>
         </div>
       </section>
