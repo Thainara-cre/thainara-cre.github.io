@@ -1,13 +1,17 @@
 {
   "name": "thainara-portfolio",
   "private": true,
-  "version": "2.0.0",
+  "version": "2.1.0",
   "type": "module",
+  "engines": {
+    "node": ">=22.12.0"
+  },
   "scripts": {
     "dev": "vite",
     "build": "tsc -b && vite build",
     "preview": "vite preview",
-    "typecheck": "tsc -b --pretty false"
+    "typecheck": "tsc -b --pretty false",
+    "check": "npm run typecheck && npm run build"
   },
   "dependencies": {
     "framer-motion": "12.43.0",
