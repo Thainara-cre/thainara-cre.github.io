@@ -1,30 +1,42 @@
 # Portfólio — Thainara Gomes
 
-Portfólio pessoal migrado para uma stack moderna: **React + TypeScript + Vite + Tailwind CSS + Framer Motion**.
+Portfólio pessoal desenvolvido com **React, TypeScript, Vite, Tailwind CSS e Framer Motion**.
 
-## Rodando localmente
+## Requisitos
+
+- Node.js 22.12 ou superior
+- npm
+
+## Desenvolvimento local
 
 ```bash
 npm install
 npm run dev
 ```
 
-## Build de produção
+## Qualidade e build
 
 ```bash
+npm run typecheck
 npm run build
-npm run preview
+npm run check
 ```
-
-## Deploy no GitHub Pages
-
-O workflow `.github/workflows/deploy.yml` faz o build e publica a pasta `dist` automaticamente a cada push na branch `main`.
-
-No GitHub, abra **Settings > Pages** e deixe **Source** como **GitHub Actions**.
 
 ## Estrutura
 
-- `src/components`: componentes reutilizáveis
-- `src/data`: conteúdo de skills e projetos
-- `public/images`: imagens estáticas
-- `src/index.css`: Tailwind + estilos globais
+```text
+src/
+├── components/   # componentes de interface reutilizáveis
+├── data/         # conteúdo e configuração centralizada
+├── hooks/        # hooks reutilizáveis
+├── lib/          # utilitários e configurações compartilhadas
+├── sections/     # seções da página
+├── App.tsx       # composição do layout
+└── main.tsx      # bootstrap da aplicação
+```
+
+## Deploy
+
+O deploy é realizado automaticamente pelo GitHub Actions após alterações na branch `main`.
+
+Fluxo: `main` → build do Vite → `dist` → GitHub Pages.

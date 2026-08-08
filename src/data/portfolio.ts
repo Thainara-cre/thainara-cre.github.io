@@ -9,13 +9,13 @@ export const skills = [
   { name: 'SQL & Bancos de Dados', icon: Database },
   { name: 'Docker & Microsserviços', icon: Layers3 },
   { name: 'IA Generativa & LLMs', icon: BrainCircuit },
-]
+] as const
 
 export const highlights = [
   { value: 'Full Stack', label: 'Backend + Frontend' },
   { value: 'Cloud', label: 'AWS e integrações' },
   { value: 'IA', label: 'LLMs, RAG e agentes' },
-]
+] as const
 
 export const projects = [
   {
@@ -36,4 +36,4 @@ export const projects = [
     description: 'Desenvolvimento de experiências responsivas e componentizadas com foco em clareza, acessibilidade e manutenção.',
     tags: ['React', 'TypeScript', 'UI', 'APIs'],
   },
-]
+] as const
