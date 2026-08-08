@@ -11,7 +11,7 @@ export const localeOptions: ReadonlyArray<{ code: Locale; label: string; htmlLan
 type NavigationKey = 'home' | 'about' | 'skills' | 'projects' | 'otherProjects' | 'contact'
 
 type ProjectCopy = { eyebrow: string; title: string; description: string }
-type OtherProjectCopy = { title: string; description: string }
+type OtherProjectCopy = { title: string; description: string; category: string }
 
 export interface Messages {
   meta: { title: string; description: string }
@@ -65,7 +65,9 @@ export interface Messages {
     eyebrow: string
     title: string
     description: string
+    publicBadge: string
     repositoryCta: string
+    referenceCta: string
     allProjectsCta: string
     items: Record<OtherProjectKey, OtherProjectCopy>
   }
@@ -115,13 +117,13 @@ const pt: Messages = {
     },
   },
   otherProjects: {
-    eyebrow: 'Código aberto', title: 'Outros projetos', description: 'Projetos pessoais e acadêmicos públicos que mostram diferentes stacks e áreas que venho explorando.',
-    repositoryCta: 'Ver repositório', allProjectsCta: 'Ver todos no GitHub',
+    eyebrow: 'Projetos públicos', title: 'Outros projetos', description: 'Uma seleção curada de repositórios públicos que mostra diferentes stacks, estudos e produtos que desenvolvi.',
+    publicBadge: 'Repositório público', repositoryCta: 'Ver código', referenceCta: 'Ver Swagger', allProjectsCta: 'Ver todos no GitHub',
     items: {
-      javaOpenAi: { title: 'Java + OpenAI', description: 'Projeto em Java para contagem de tokens e realização de requisições à API da OpenAI.' },
-      chronos: { title: 'Chronos Pomodoro', description: 'Aplicação em React e Next.js criada para auxiliar na organização de ciclos de foco com o método Pomodoro.' },
-      myFinance: { title: 'MyFinance Web', description: 'Aplicação web .NET para organização financeira, estruturada em camadas e com persistência de dados.' },
-      taskScheduler: { title: 'Agendamento de Tarefas', description: 'Projeto em C# voltado ao cadastro e gerenciamento de tarefas utilizando Entity Framework.' },
+      javaOpenAi: { title: 'Java + OpenAI', category: 'IA & integrações', description: 'Integração em Java 23 para realizar requisições à API da OpenAI e contar tokens com JTokkit.' },
+      chronos: { title: 'Chronos Pomodoro', category: 'Produtividade', description: 'Aplicação de foco construída com React 19, TypeScript e Vite para organizar ciclos do método Pomodoro.' },
+      myFinance: { title: 'MyFinance Web', category: 'Finanças', description: 'Sistema financeiro pessoal em ASP.NET Core/.NET 9, organizado em camadas e com persistência via EF Core e SQL Server.' },
+      taskScheduler: { title: 'Agendamento de Tarefas', category: 'API REST', description: 'Web API .NET 6 para CRUD e consultas de tarefas, usando Entity Framework Core, SQL Server e documentação Swagger.' },
     },
   },
   contact: {
@@ -167,13 +169,13 @@ const en: Messages = {
     },
   },
   otherProjects: {
-    eyebrow: 'Open source', title: 'Other projects', description: 'Public personal and academic projects showcasing different stacks and areas I have been exploring.',
-    repositoryCta: 'View repository', allProjectsCta: 'View all on GitHub',
+    eyebrow: 'Public projects', title: 'Other projects', description: 'A curated selection of public repositories showing different stacks, studies and products I have built.',
+    publicBadge: 'Public repository', repositoryCta: 'View code', referenceCta: 'View Swagger', allProjectsCta: 'View all on GitHub',
     items: {
-      javaOpenAi: { title: 'Java + OpenAI', description: 'Java project for token counting and requests to the OpenAI API.' },
-      chronos: { title: 'Chronos Pomodoro', description: 'React and Next.js application designed to organize focus cycles using the Pomodoro method.' },
-      myFinance: { title: 'MyFinance Web', description: 'Layered .NET web application for personal finance organization and data persistence.' },
-      taskScheduler: { title: 'Task Scheduling', description: 'C# project for registering and managing tasks using Entity Framework.' },
+      javaOpenAi: { title: 'Java + OpenAI', category: 'AI & integrations', description: 'Java 23 integration for sending requests to the OpenAI API and counting tokens with JTokkit.' },
+      chronos: { title: 'Chronos Pomodoro', category: 'Productivity', description: 'Focus application built with React 19, TypeScript and Vite to organize Pomodoro work cycles.' },
+      myFinance: { title: 'MyFinance Web', category: 'Finance', description: 'Personal finance system built with ASP.NET Core/.NET 9, layered architecture, EF Core and SQL Server.' },
+      taskScheduler: { title: 'Task Scheduling', category: 'REST API', description: '.NET 6 Web API for task CRUD and queries using Entity Framework Core, SQL Server and Swagger documentation.' },
     },
   },
   contact: {
@@ -219,13 +221,13 @@ const es: Messages = {
     },
   },
   otherProjects: {
-    eyebrow: 'Código abierto', title: 'Otros proyectos', description: 'Proyectos personales y académicos públicos que muestran diferentes stacks y áreas que he estado explorando.',
-    repositoryCta: 'Ver repositorio', allProjectsCta: 'Ver todos en GitHub',
+    eyebrow: 'Proyectos públicos', title: 'Otros proyectos', description: 'Una selección curada de repositorios públicos que muestra diferentes stacks, estudios y productos que he desarrollado.',
+    publicBadge: 'Repositorio público', repositoryCta: 'Ver código', referenceCta: 'Ver Swagger', allProjectsCta: 'Ver todos en GitHub',
     items: {
-      javaOpenAi: { title: 'Java + OpenAI', description: 'Proyecto en Java para contar tokens y realizar solicitudes a la API de OpenAI.' },
-      chronos: { title: 'Chronos Pomodoro', description: 'Aplicación en React y Next.js diseñada para organizar ciclos de concentración con el método Pomodoro.' },
-      myFinance: { title: 'MyFinance Web', description: 'Aplicación web .NET en capas para organizar finanzas personales y persistir datos.' },
-      taskScheduler: { title: 'Programación de Tareas', description: 'Proyecto en C# para registrar y gestionar tareas utilizando Entity Framework.' },
+      javaOpenAi: { title: 'Java + OpenAI', category: 'IA e integraciones', description: 'Integración en Java 23 para realizar solicitudes a la API de OpenAI y contar tokens con JTokkit.' },
+      chronos: { title: 'Chronos Pomodoro', category: 'Productividad', description: 'Aplicación de enfoque construida con React 19, TypeScript y Vite para organizar ciclos del método Pomodoro.' },
+      myFinance: { title: 'MyFinance Web', category: 'Finanzas', description: 'Sistema de finanzas personales en ASP.NET Core/.NET 9, organizado en capas y con EF Core y SQL Server.' },
+      taskScheduler: { title: 'Programación de Tareas', category: 'API REST', description: 'Web API .NET 6 para CRUD y consultas de tareas, utilizando Entity Framework Core, SQL Server y documentación Swagger.' },
     },
   },
   contact: {
