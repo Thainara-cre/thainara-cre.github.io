@@ -1,16 +1,20 @@
 import { Footer } from './components/Footer'
 import { Header } from './components/Header'
+import { LanguageProvider, useLanguage } from './i18n/LanguageContext'
 import { AboutSection } from './sections/AboutSection'
 import { ContactSection } from './sections/ContactSection'
 import { HeroSection } from './sections/HeroSection'
+import { OtherProjectsSection } from './sections/OtherProjectsSection'
 import { ProjectsSection } from './sections/ProjectsSection'
 import { SkillsSection } from './sections/SkillsSection'
 
-function App() {
+function Portfolio() {
+  const { t } = useLanguage()
+
   return (
     <div className="min-h-screen overflow-hidden bg-slate-950 text-slate-100 transition-colors light:bg-[#f8fafc] light:text-slate-900">
       <a className="skip-link" href="#main-content">
-        Pular para o conteúdo
+        {t.accessibility.skipToContent}
       </a>
       <Header />
       <main id="main-content" tabIndex={-1}>
@@ -18,10 +22,19 @@ function App() {
         <AboutSection />
         <SkillsSection />
         <ProjectsSection />
+        <OtherProjectsSection />
         <ContactSection />
       </main>
       <Footer />
     </div>
+  )
+}
+
+function App() {
+  return (
+    <LanguageProvider>
+      <Portfolio />
+    </LanguageProvider>
   )
 }
 
