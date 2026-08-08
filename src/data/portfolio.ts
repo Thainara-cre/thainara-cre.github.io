@@ -1,39 +1,51 @@
 import { BrainCircuit, Cloud, Code2, Database, GitBranch, Layers3, ServerCog, Workflow } from 'lucide-react'
 
-export const skills = [
-  { name: 'Java & Spring Boot', icon: ServerCog },
-  { name: 'React & TypeScript', icon: Code2 },
-  { name: 'APIs REST & Integrações', icon: Workflow },
-  { name: 'AWS & Cloud', icon: Cloud },
-  { name: 'Kafka & Mensageria', icon: GitBranch },
-  { name: 'SQL & Bancos de Dados', icon: Database },
-  { name: 'Docker & Microsserviços', icon: Layers3 },
-  { name: 'IA Generativa & LLMs', icon: BrainCircuit },
-] as const
+export type SkillKey = 'java' | 'react' | 'api' | 'cloud' | 'messaging' | 'database' | 'architecture' | 'ai'
 
-export const highlights = [
-  { value: 'Full Stack', label: 'Backend + Frontend' },
-  { value: 'Cloud', label: 'AWS e integrações' },
-  { value: 'IA', label: 'LLMs, RAG e agentes' },
-] as const
+export const skills: ReadonlyArray<{ key: SkillKey; icon: typeof ServerCog }> = [
+  { key: 'java', icon: ServerCog },
+  { key: 'react', icon: Code2 },
+  { key: 'api', icon: Workflow },
+  { key: 'cloud', icon: Cloud },
+  { key: 'messaging', icon: GitBranch },
+  { key: 'database', icon: Database },
+  { key: 'architecture', icon: Layers3 },
+  { key: 'ai', icon: BrainCircuit },
+]
 
-export const projects = [
+export type FeaturedProjectKey = 'payments' | 'ai' | 'frontend'
+
+export const featuredProjects: ReadonlyArray<{ key: FeaturedProjectKey; tags: readonly string[] }> = [
+  { key: 'payments', tags: ['Java', 'Spring Boot', 'Kafka', 'REST'] },
+  { key: 'ai', tags: ['LLMs', 'RAG', 'Python', 'Chatbots'] },
+  { key: 'frontend', tags: ['React', 'TypeScript', 'UI', 'APIs'] },
+]
+
+export type OtherProjectKey = 'javaOpenAi' | 'chronos' | 'myFinance' | 'taskScheduler'
+
+export const otherProjects: ReadonlyArray<{
+  key: OtherProjectKey
+  repositoryUrl: string
+  tags: readonly string[]
+}> = [
   {
-    eyebrow: 'Backend & Integrações',
-    title: 'Ecossistema de pagamentos',
-    description: 'Experiência com APIs, geração de QR Code Pix, integrações entre serviços e fluxos orientados a eventos.',
-    tags: ['Java', 'Spring Boot', 'Kafka', 'REST'],
+    key: 'javaOpenAi',
+    repositoryUrl: 'https://github.com/Thainara-cre/java-com-openai',
+    tags: ['Java', 'OpenAI API', 'Tokens'],
   },
   {
-    eyebrow: 'Inteligência Artificial',
-    title: 'Chatbots e automações inteligentes',
-    description: 'Construção de experiências conversacionais e integrações para automação de jornadas corporativas.',
-    tags: ['LLMs', 'RAG', 'Python', 'Chatbots'],
+    key: 'chronos',
+    repositoryUrl: 'https://github.com/Thainara-cre/chronos-pomodoro',
+    tags: ['React', 'Next.js', 'Pomodoro'],
   },
   {
-    eyebrow: 'Frontend',
-    title: 'Interfaces web modernas',
-    description: 'Desenvolvimento de experiências responsivas e componentizadas com foco em clareza, acessibilidade e manutenção.',
-    tags: ['React', 'TypeScript', 'UI', 'APIs'],
+    key: 'myFinance',
+    repositoryUrl: 'https://github.com/Thainara-cre/MyFinance-Web.',
+    tags: ['C#', '.NET', 'SQL'],
   },
-] as const
+  {
+    key: 'taskScheduler',
+    repositoryUrl: 'https://github.com/Thainara-cre/Sistema-de-Agendamento-de-Tarefas-com-Entity-Framework',
+    tags: ['C#', 'Entity Framework', '.NET'],
+  },
+]
