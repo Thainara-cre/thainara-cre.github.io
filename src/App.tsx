@@ -3,6 +3,8 @@ import { Header } from './components/Header'
 import { LanguageProvider, useLanguage } from './i18n/LanguageContext'
 import { AboutSection } from './sections/AboutSection'
 import { ContactSection } from './sections/ContactSection'
+import { EducationSection } from './sections/EducationSection'
+import { ExperienceSection } from './sections/ExperienceSection'
 import { HeroSection } from './sections/HeroSection'
 import { OtherProjectsSection } from './sections/OtherProjectsSection'
 import { ProjectsSection } from './sections/ProjectsSection'
@@ -20,9 +22,11 @@ function Portfolio() {
       <main id="main-content" tabIndex={-1}>
         <HeroSection />
         <AboutSection />
+        <ExperienceSection />
         <SkillsSection />
         <ProjectsSection />
         <OtherProjectsSection />
+        <EducationSection />
         <ContactSection />
       </main>
       <Footer />

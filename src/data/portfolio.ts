@@ -1,24 +1,24 @@
-import { BrainCircuit, Cloud, Code2, Database, GitBranch, Layers3, ServerCog, Workflow } from 'lucide-react'
+import { Activity, BrainCircuit, Cloud, CreditCard, Database, GitBranch, ServerCog, ShieldCheck, Workflow } from 'lucide-react'
 
-export type SkillKey = 'java' | 'react' | 'api' | 'cloud' | 'messaging' | 'database' | 'architecture' | 'ai'
+export type SkillKey = 'java' | 'api' | 'cloud' | 'payments' | 'messaging' | 'database' | 'security' | 'devops'
 
 export const skills: ReadonlyArray<{ key: SkillKey; icon: typeof ServerCog }> = [
   { key: 'java', icon: ServerCog },
-  { key: 'react', icon: Code2 },
   { key: 'api', icon: Workflow },
   { key: 'cloud', icon: Cloud },
+  { key: 'payments', icon: CreditCard },
   { key: 'messaging', icon: GitBranch },
   { key: 'database', icon: Database },
-  { key: 'architecture', icon: Layers3 },
-  { key: 'ai', icon: BrainCircuit },
+  { key: 'security', icon: ShieldCheck },
+  { key: 'devops', icon: Activity },
 ]
 
-export type FeaturedProjectKey = 'payments' | 'ai' | 'frontend'
+export type FeaturedProjectKey = 'payments' | 'security' | 'ai'
 
 export const featuredProjects: ReadonlyArray<{ key: FeaturedProjectKey; tags: readonly string[] }> = [
-  { key: 'payments', tags: ['Java', 'Spring Boot', 'Kafka', 'REST'] },
-  { key: 'ai', tags: ['LLMs', 'RAG', 'Python', 'Chatbots'] },
-  { key: 'frontend', tags: ['React', 'TypeScript', 'UI', 'APIs'] },
+  { key: 'payments', tags: ['Java', 'Spring Boot', 'AWS', 'PIX', 'BACEN'] },
+  { key: 'security', tags: ['KMS', 'HSM', 'Vault', 'CI/CD', 'Observability'] },
+  { key: 'ai', tags: ['IBM Watson', 'AWS', 'IA Generativa', 'Chatbots'] },
 ]
 
 export type OtherProjectKey = 'javaOpenAi' | 'chronos' | 'myFinance' | 'taskScheduler'
