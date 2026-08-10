@@ -189,9 +189,9 @@ const pt: Messages = {
     publicBadge: 'Repositório público', repositoryCta: 'Ver código', referenceCta: 'Ver Swagger', allProjectsCta: 'Ver todos no GitHub',
     items: {
       javaOpenAi: { title: 'Java + OpenAI', category: 'IA & integrações', description: 'Integração em Java 23 para realizar requisições à API da OpenAI e contar tokens com JTokkit.' },
-      chronos: { title: 'Chronos Pomodoro', category: 'Produtividade', description: 'Aplicação de foco construída com React 19, TypeScript e Vite para organizar ciclos do método Pomodoro.' },
-      myFinance: { title: 'MyFinance Web', category: 'Finanças', description: 'Sistema financeiro pessoal em ASP.NET Core/.NET 9, organizado em camadas e com persistência via EF Core e SQL Server.' },
-      taskScheduler: { title: 'Agendamento de Tarefas', category: 'API REST', description: 'Web API .NET 6 para CRUD e consultas de tarefas, usando Entity Framework Core, SQL Server e documentação Swagger.' },
+      chronos: { title: 'Chronos Pomodoro', category: 'Produtividade', description: 'Aplicação de foco construída com React, TypeScript e Vite para organizar ciclos do método Pomodoro.' },
+      myFinance: { title: 'MyFinance Web', category: 'Finanças', description: 'Sistema financeiro pessoal em ASP.NET Core, organizado em camadas e com persistência via Entity Framework Core e SQL Server.' },
+      taskScheduler: { title: 'Agendamento de Tarefas', category: 'API REST', description: 'Web API para CRUD e consultas de tarefas, usando Entity Framework Core, SQL Server e documentação Swagger.' },
     },
   },
   education: {
@@ -300,10 +300,10 @@ const en: Messages = {
     eyebrow: 'Public projects', title: 'Other projects', description: 'A curated selection of public repositories showing different stacks, studies and products I have built.',
     publicBadge: 'Public repository', repositoryCta: 'View code', referenceCta: 'View Swagger', allProjectsCta: 'View all on GitHub',
     items: {
-      javaOpenAi: { title: 'Java + OpenAI', category: 'AI & integrations', description: 'Java 23 integration for sending requests to the OpenAI API and counting tokens with JTokkit.' },
-      chronos: { title: 'Chronos Pomodoro', category: 'Productivity', description: 'Focus application built with React 19, TypeScript and Vite to organize Pomodoro work cycles.' },
-      myFinance: { title: 'MyFinance Web', category: 'Finance', description: 'Personal finance system built with ASP.NET Core/.NET 9, layered architecture, EF Core and SQL Server.' },
-      taskScheduler: { title: 'Task Scheduling', category: 'REST API', description: '.NET 6 Web API for task CRUD and queries using Entity Framework Core, SQL Server and Swagger documentation.' },
+      javaOpenAi: { title: 'Java + OpenAI', category: 'AI & integrations', description: 'Java integration for sending requests to the OpenAI API and counting tokens with JTokkit.' },
+      chronos: { title: 'Chronos Pomodoro', category: 'Productivity', description: 'Focus application built with React, TypeScript and Vite to organize Pomodoro work cycles.' },
+      myFinance: { title: 'MyFinance Web', category: 'Finance', description: 'Personal finance system built with ASP.NET Core, layered architecture, Entity Framework Core and SQL Server.' },
+      taskScheduler: { title: 'Task Scheduling', category: 'REST API', description: 'Web API for task CRUD and queries using Entity Framework Core, SQL Server and Swagger documentation.' },
     },
   },
   education: {
@@ -316,7 +316,7 @@ const en: Messages = {
     courses: {
       javascript: { name: 'Front-end JavaScript Junior', provider: 'Run2biz / be.academy', duration: '110 hours' },
       spreadJava: { name: 'Bootcamp Spread Java Developer', provider: 'Digital Innovation One / Spread', duration: '97 hours' },
-      webIntro: { name: 'Introdução ao Desenvolvimento Web', provider: 'UNASP/SP', duration: '30 hours' },
+      webIntro: { name: 'Introduction to Web Development', provider: 'UNASP/SP', duration: '30 hours' },
     },
     languagesTitle: 'Languages', languages: [{ name: 'English', level: 'Intermediate' }, { name: 'Spanish', level: 'Intermediate' }],
   },
@@ -412,10 +412,10 @@ const es: Messages = {
     eyebrow: 'Proyectos públicos', title: 'Otros proyectos', description: 'Una selección curada de repositorios públicos que muestra diferentes stacks, estudios y productos que he desarrollado.',
     publicBadge: 'Repositorio público', repositoryCta: 'Ver código', referenceCta: 'Ver Swagger', allProjectsCta: 'Ver todos en GitHub',
     items: {
-      javaOpenAi: { title: 'Java + OpenAI', category: 'IA e integraciones', description: 'Integración en Java 23 para realizar solicitudes a la API de OpenAI y contar tokens con JTokkit.' },
-      chronos: { title: 'Chronos Pomodoro', category: 'Productividad', description: 'Aplicación de enfoque construida con React 19, TypeScript y Vite para organizar ciclos del método Pomodoro.' },
-      myFinance: { title: 'MyFinance Web', category: 'Finanzas', description: 'Sistema de finanzas personales en ASP.NET Core/.NET 9, organizado en capas y con EF Core y SQL Server.' },
-      taskScheduler: { title: 'Programación de Tareas', category: 'API REST', description: 'Web API .NET 6 para CRUD y consultas de tareas, utilizando Entity Framework Core, SQL Server y documentación Swagger.' },
+      javaOpenAi: { title: 'Java + OpenAI', category: 'IA e integraciones', description: 'Integración en Java para realizar solicitudes a la API de OpenAI y contar tokens con JTokkit.' },
+      chronos: { title: 'Chronos Pomodoro', category: 'Productividad', description: 'Aplicación de enfoque construida con React, TypeScript y Vite para organizar ciclos del método Pomodoro.' },
+      myFinance: { title: 'MyFinance Web', category: 'Finanzas', description: 'Sistema de finanzas personales en ASP.NET Core, organizado en capas y con Entity Framework Core y SQL Server.' },
+      taskScheduler: { title: 'Programación de Tareas', category: 'API REST', description: 'Web API para CRUD y consultas de tareas, utilizando Entity Framework Core, SQL Server y documentación Swagger.' },
     },
   },
   education: {
@@ -428,7 +428,7 @@ const es: Messages = {
     courses: {
       javascript: { name: 'Front-end JavaScript Junior', provider: 'Run2biz / be.academy', duration: '110 horas' },
       spreadJava: { name: 'Bootcamp Spread Java Developer', provider: 'Digital Innovation One / Spread', duration: '97 horas' },
-      webIntro: { name: 'Introdução ao Desenvolvimento Web', provider: 'UNASP/SP', duration: '30 horas' },
+      webIntro: { name: 'Introducción al Desarrollo Web', provider: 'UNASP/SP', duration: '30 horas' },
     },
     languagesTitle: 'Idiomas', languages: [{ name: 'Inglés', level: 'Intermedio' }, { name: 'Español', level: 'Intermedio' }],
   },

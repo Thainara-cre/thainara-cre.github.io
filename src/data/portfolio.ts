@@ -50,13 +50,13 @@ export const otherProjects: ReadonlyArray<OtherProject> = [
   {
     key: 'myFinance',
     repositoryUrl: 'https://github.com/Thainara-cre/MyFinance-Web.',
-    tags: ['.NET 9', 'ASP.NET Core', 'EF Core', 'SQL Server'],
+    tags: ['.NET 10', 'ASP.NET Core', 'EF Core 10', 'SQL Server'],
     visual: 'finance',
   },
   {
     key: 'taskScheduler',
     repositoryUrl: 'https://github.com/Thainara-cre/Sistema-de-Agendamento-de-Tarefas-com-Entity-Framework',
-    tags: ['.NET 6', 'Web API', 'EF Core', 'Swagger'],
+    tags: ['.NET 10', 'Web API', 'EF Core 10', 'Swagger'],
     visual: 'api',
     referenceUrl: 'https://github.com/Thainara-cre/Sistema-de-Agendamento-de-Tarefas-com-Entity-Framework/blob/main/swagger.png',
   },
