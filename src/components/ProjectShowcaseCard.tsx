@@ -7,6 +7,7 @@ import {
   Database,
   Globe2,
   Landmark,
+  MonitorPlay,
   TerminalSquare,
 } from 'lucide-react'
 import { FaGithub } from 'react-icons/fa'
@@ -151,6 +152,17 @@ export function ProjectShowcaseCard({ project, copy, labels, index }: ProjectSho
         </ul>
 
         <div className="mt-6 flex flex-wrap items-center gap-3 border-t border-white/10 pt-5 light:border-slate-200">
+          {project.demoUrl && (
+            <a
+              className="inline-flex items-center gap-2 text-sm font-bold text-cyan-300 transition hover:text-cyan-200 light:text-cyan-700 light:hover:text-cyan-800"
+              href={project.demoUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              <MonitorPlay size={17} aria-hidden="true" /> Demo <ArrowUpRight size={15} aria-hidden="true" />
+            </a>
+          )}
+
           <a
             className="inline-flex items-center gap-2 text-sm font-bold text-violet-300 transition hover:text-violet-200 light:text-violet-700 light:hover:text-violet-800"
             href={project.repositoryUrl}

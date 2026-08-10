@@ -1,12 +1,12 @@
 import { motion } from 'framer-motion'
-import { ArrowDown, ArrowRight, Mail, Sparkles } from 'lucide-react'
+import { ArrowDown, ArrowRight, FileText, Mail, Sparkles } from 'lucide-react'
 import { FaGithub, FaLinkedin } from 'react-icons/fa'
 import { siteConfig } from '../data/site'
 import { useLanguage } from '../i18n/LanguageContext'
 import { reveal, revealWithDelay } from '../lib/motion'
 
 export function HeroSection() {
-  const { t } = useLanguage()
+  const { locale, t } = useLanguage()
 
   return (
     <section id="home" aria-labelledby="hero-title" className="relative flex min-h-screen items-center pt-24">
@@ -28,6 +28,9 @@ export function HeroSection() {
           <div className="mt-8 flex flex-wrap gap-3">
             <a className="primary-button" href="#other-projects">{t.hero.projectsCta} <ArrowRight size={18} aria-hidden="true" /></a>
             <a className="secondary-button" href="#contact">{t.hero.contactCta}</a>
+            <a className="secondary-button" href={`/curriculo.html?lang=${locale}`} target="_blank" rel="noopener noreferrer">
+              <FileText size={18} aria-hidden="true" /> CV
+            </a>
           </div>
 
           <div className="mt-9 flex gap-3" aria-label={t.accessibility.socialLinks}>

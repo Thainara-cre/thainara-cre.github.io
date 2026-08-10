@@ -1,4 +1,4 @@
-import { Activity, BrainCircuit, Cloud, CreditCard, Database, GitBranch, ServerCog, ShieldCheck, Workflow } from 'lucide-react'
+import { Activity, Cloud, CreditCard, Database, GitBranch, ServerCog, ShieldCheck, Workflow } from 'lucide-react'
 
 export type SkillKey = 'java' | 'api' | 'cloud' | 'payments' | 'messaging' | 'database' | 'security' | 'devops'
 
@@ -30,6 +30,7 @@ export interface OtherProject {
   tags: readonly string[]
   visual: OtherProjectVisual
   referenceUrl?: string
+  demoUrl?: string
 }
 
 export const otherProjects: ReadonlyArray<OtherProject> = [
@@ -44,6 +45,7 @@ export const otherProjects: ReadonlyArray<OtherProject> = [
     repositoryUrl: 'https://github.com/Thainara-cre/chronos-pomodoro',
     tags: ['React 19', 'TypeScript', 'Vite'],
     visual: 'focus',
+    demoUrl: 'https://stackblitz.com/github/Thainara-cre/chronos-pomodoro/tree/feat/pomodoro-app?startScript=dev',
   },
   {
     key: 'myFinance',
